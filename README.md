@@ -3,12 +3,21 @@
 A Quizlet-style app for learning the companies in major stock indices, starting with the FTSE 100.
 React + TypeScript + Vite. Progress is stored in the browser (no accounts yet).
 
+**Live app:** https://tmills08.github.io/FNCEAPP__v1/
+
 ```bash
 npm install
 npm run dev      # http://localhost:5173
 npm test         # unit tests (Vitest), including validation of the data files
 npm run build    # typecheck + production build
 ```
+
+## Deployment
+
+Every push to `main` runs `.github/workflows/deploy.yml`. It runs the tests, builds the app and publishes
+it to GitHub Pages; if a test fails, nothing is published. This needs a one-time setting in the repo:
+**Settings → Pages → Source: GitHub Actions**. Progress is saved in each visitor's own browser, so it
+isn't shared between devices.
 
 ## Editing company data
 
